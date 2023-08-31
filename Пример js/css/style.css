@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #010101;
+}
+
+.hamburger {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.hamburger .line {
+  position: absolute;
+  width: 65px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.hamburger .line1 {
+  transform: translateY(-20px);
+}
+
+.hamburger .line3 {
+  transform: translateY(20px);
+}
+
+.hamburger.clicked {
+  transform: rotate(180deg);
+}
+
+.hamburger.clicked .line1 {
+  transform: translateY(0) rotate(45deg);
+}
+
+.hamburger.clicked .line2 {
+  opacity: 0;
+}
+
+.hamburger.clicked .line3 {
+  transform: translateY(0) rotate(-45deg);
+}
